@@ -14,10 +14,10 @@ public class DeptController_Consumer {
 
     @RequestMapping(value = "/findProvider")
     public String findProvider() {
-        System.out.println("value = ");
+        System.out.println("value = 2");
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:8001/dept/list",String.class);
-        System.out.println("value = ");
+        System.out.println("value =2 ");
         String value = entity.getBody();
         System.out.println("value = " + value);
         return value;
