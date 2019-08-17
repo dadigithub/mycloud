@@ -16,6 +16,7 @@ public class DeptController_Consumer {
     public String findProvider() {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:8001/dept/list",String.class);
+        System.out.println("value = ");
         String value = entity.getBody();
         System.out.println("value = " + value);
         return value;
