@@ -14,6 +14,7 @@ public class DeptController_Consumer {
 
     @RequestMapping(value = "/findProvider")
     public String findProvider() {
+        System.out.println("value = ");
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:8001/dept/list",String.class);
         String value = entity.getBody();
